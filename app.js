@@ -1,0 +1,2 @@
+var counter = 0;
+
