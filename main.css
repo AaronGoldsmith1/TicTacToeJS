@@ -1,0 +1,29 @@
+#boardDiv {
+height: 600px;
+width: 600px;
+background-color: #7a9a9f;
+border: 8px solid #4f6367;
+}
+
+.boardButton {
+height: 200px;
+width: 200px;
+background-color: #6c698d;
+outline:0;
+border: 2px solid #bfc0c0;
+}
+
+
+#row2{
+
+}
+
+#row3{
+
+
+}
+
+#button1 {
+
+
+}
