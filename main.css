@@ -15,14 +15,26 @@ border-radius: 12px;
 }
 
 #newGameButton{
-  background-color: white;
+  background-color: #d3d3d3;
   margin-left:40px;
-  margin-tpx;
   height: 45px;
   width: 180px;
   font-size: 20px;
   outline: 0;
 }
+
+
+#displayWinner{
+
+height: 45px;
+width: 250px;
+background-color: #d3d3d3;
+text-align: center;
+float: right;
+margin-right: 40px;
+
+}
+
 
 .boardButton {
 height: 200px;
@@ -52,6 +64,16 @@ display: table-cell;
 img {
   height: 100%;
   width: 100%;
+}
+
+p {
+
+font-size: 35px;
+vertical-align: center;
+text-align: center;
+display: table-cell;
+padding-left: 12px;
+text-decoration: underline;
 
 
 }

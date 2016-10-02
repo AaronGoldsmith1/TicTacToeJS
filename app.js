@@ -13,7 +13,7 @@ var oImage = "images/O.png" */
 
 
 var counter = 0;
-var activePlayer = "X"
+var activePlayer = null;
 var resetButton = document.getElementById("newGameButton");
 
 var gameState = function {
@@ -32,11 +32,15 @@ var playerXMove = function() {
         }
       }
     }
+  activePlayer = "X"
   if (checkWin(); == false){
-  counter++;
-  playerOMove();
+    counter++;
+    playerOMove();
+  }
+  else {
+    gameOver();
+  }
 
-}
 }
 
 var playerOMove = function(){
@@ -51,10 +55,15 @@ var playerOMove = function(){
         }
       }
     }
+    activePlayer = "O"
     if (checkWin() == false {
-    counter--;
-    playerXMove();
+      counter--;
+      playerXMove();
   }
+    else {
+      gameOver();
+    }
+
 }
 
 
@@ -87,6 +96,12 @@ var checkWin = function() {
         return false;
     }
 
+}
+
+
+var gameOver = function() {
+
+  document.GetElementById("displayWinner").innerHTML= currentPlayer + " is the winner!";
 }
 
 var resetBoard = function() {
