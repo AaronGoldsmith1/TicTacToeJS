@@ -48,3 +48,10 @@ display: table-cell;
   display: table;
 
 }
+
+img {
+  height: 100%;
+  width: 100%;
+
+
+}

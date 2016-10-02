@@ -1,7 +1,4 @@
-console.log("hi")
-
-var counter = 0;
-var button1 = document.getElementById("button1");
+/*var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
@@ -11,31 +8,92 @@ var button7 = document.getElementById("button7");
 var button8 = document.getElementById("button8");
 var button9 = document.getElementById("button9");
 var xImage = "images/X.png"
-var oImage = "images/O.png"
+var oImage = "images/O.png" */
+
+
+
+var counter = 0;
+var activePlayer = "X"
 var resetButton = document.getElementById("newGameButton");
 
+var gameState = function {
 
+buttons = document.getElementsByClassName("boardButton")
 
-document.getElementById("button1").onclick
-
-
-
-
-var playerXMove = function () {
+var playerXMove = function() {
   if (counter == 0) {
 
-document.getElementsByClassName("boardButton").addEventListener('click', function (){document.getElementsByClassName("boardButton").innerHtml = xImage})
-  }
+    for (var i = 0; i < buttons.length; i++){
+
+      if (buttons[i].innerHTML=null){
+      buttons[i].addEventListener(click, function() {
+      buttons[i].innerHTML="<img src='images/X.png'/>";
+      buttons[i].addAttribute(true);
+        }
+      }
+    }
+  if (checkWin(); == false){
   counter++;
   playerOMove();
+
+}
 }
 
-var playerOMove = function (){
-  if (counter == 1) {}
-  document.getElementsByClassName("boardButton").addEventListener('click', function (){document.getElementsByClassName("boardButton").innerHtml = oImage})
-    }
-    counter++;
-    playerOMove();
+var playerOMove = function(){
+  if (counter == 1) {
 
-counter ++
-playerXMove();
+    for (var i = 0; i < buttons.length; i++){
+
+      if (buttons[i].innerHTML=null){
+      buttons[i].addEventListener(click, function() {
+      buttons[i].innerHTML="<img src='images/O.png'/>";
+      buttons[i].addAttribute(true);
+        }
+      }
+    }
+    if (checkWin() == false {
+    counter--;
+    playerXMove();
+  }
+}
+
+
+var checkWin = function() {
+
+        if(button1 == true && button2 == true && button3 == true){
+            return true;
+        }
+        if(button4 == true && button5 == true && button6 == true){
+            return true;
+        }
+        if(button7 == true && button8 == true && button9 == true){
+            return true;
+        }
+        if(button1 == true && button4 == true && button7 == true){
+            return true;
+        }
+        if(button2 == true && button5 == true && button8 == true){
+            return true;
+        }
+        if(button3 == true && button6 == true && button9 == true){
+            return true;
+        }
+        if(button1 == true && button5 == true && button9 == true){
+            return true;
+        }
+        if(button3 == true && button5 == true && button7 == true){
+            return true;
+        }
+        return false;
+    }
+
+}
+
+var resetBoard = function() {
+
+        restartButton.addEventListener("click", function {
+          for (var i = 0; i < buttons.length; i++)
+          buttons[i].innerHTML = null;
+        }
+
+}
