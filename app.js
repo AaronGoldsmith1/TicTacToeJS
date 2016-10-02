@@ -1,3 +1,4 @@
+console.log("hi")
 
 var counter = 0;
 var button1 = document.getElementById("button1");
@@ -11,26 +12,30 @@ var button8 = document.getElementById("button8");
 var button9 = document.getElementById("button9");
 var xImage = "images/X.png"
 var oImage = "images/O.png"
-var resetButton = document.getElementByID("newGameButton");
+var resetButton = document.getElementById("newGameButton");
 
 
 
-var playerXMove = function {
+document.getElementById("button1").onclick
+
+
+
+
+var playerXMove = function () {
   if (counter == 0) {
 
-document.getElementsByClassName("boardButton").addEventListener('click', function {document.getElementsByClassName("boardButton").innerHtml = xImage}
+document.getElementsByClassName("boardButton").addEventListener('click', function (){document.getElementsByClassName("boardButton").innerHtml = xImage})
   }
   counter++;
   playerOMove();
 }
 
-var playerOMove = function {
+var playerOMove = function (){
   if (counter == 1) {}
-  document.getElementsByClassName("boardButton").addEventListener('click', function {document.getElementsByClassName("boardButton").innerHtml = oImage}
+  document.getElementsByClassName("boardButton").addEventListener('click', function (){document.getElementsByClassName("boardButton").innerHtml = oImage})
     }
     counter++;
     playerOMove();
-  }
+
 counter ++
 playerXMove();
-}
