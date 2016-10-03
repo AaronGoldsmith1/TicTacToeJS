@@ -1,79 +1,53 @@
 #boardDiv {
-height: 650px;
-width: 600px;
-margin: 0 auto;
-overflow: auto;
+    height: 650px;
+    width: 600px;
+    margin: 0 auto;
+    overflow: auto;
 }
-
 #containerDiv {
-height: 720px;
-width: 680px;
-background-color: #7a9a9f;
-padding-top: 30px;
-border: 12px solid #222222;
-border-radius: 12px;
+    height: 720px;
+    width: 680px;
+    background-color: #7a9a9f;
+    padding-top: 30px;
+    border: 12px solid #222222;
+    border-radius: 12px;
 }
-
-#newGameButton{
-  background-color: #d3d3d3;
-  margin-left:40px;
-  height: 45px;
-  width: 180px;
-  font-size: 20px;
-  outline: 0;
+#newGameButton {
+    background-color: #d3d3d3;
+    margin-left: 40px;
+    height: 45px;
+    width: 180px;
+    font-size: 20px;
+    outline: 0;
 }
-
-
-#displayWinner{
-
-height: 45px;
-width: 250px;
-background-color: #d3d3d3;
-text-align: center;
-float: right;
-margin-right: 40px;
-
+#displayWinner {
+    height: 45px;
+    width: 250px;
+    background-color: #d3d3d3;
+    text-align: center;
+    float: right;
+    margin-right: 40px;
 }
-
-
 .boardButton {
-height: 200px;
-width: 200px;
-background-color: #6c698d;
-outline:0;
-border: 6px solid #bfc0c0;
-display: table-cell;
-
+    height: 200px;
+    width: 200px;
+    background-color: #6c698d;
+    outline: 0;
+    border: 6px solid #bfc0c0;
+    display: table-cell;
 }
-
-#row1{
-  display: table;
-
+#row1 #row2 #row3 {
+    display: table;
 }
-
-#row2{
-  display: table;
-
-}
-
-#row3{
-  display: table;
-
-}
-
 img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
-
 p {
-
-font-size: 35px;
-vertical-align: center;
-text-align: center;
-display: table-cell;
-padding-left: 12px;
-text-decoration: underline;
-
-
+    font-size: 35px;
+    vertical-align: center;
+    text-align: center;
+    display: table-cell;
+    padding-left: 12px;
+    text-decoration: underline;
 }

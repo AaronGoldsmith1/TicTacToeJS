@@ -9,8 +9,8 @@ button6 : document.getElementById("button6"),
 button7 : document.getElementById("button7"),
 button8 : document.getElementById("button8"),
 button9 : document.getElementById("button9"),
-xImage : "images/X.png",
-oImage : "images/O.png",
+xImage : "<img src = 'images/X.png'></img>",
+oImage : "<img src = 'images/O.png'></img>",
 }
 
 
