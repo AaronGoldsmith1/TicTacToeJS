@@ -1,14 +1,19 @@
-/*var button1 = document.getElementById("button1");
-var button2 = document.getElementById("button2");
-var button3 = document.getElementById("button3");
-var button4 = document.getElementById("button4");
-var button5 = document.getElementById("button5");
-var button6 = document.getElementById("button6");
-var button7 = document.getElementById("button7");
-var button8 = document.getElementById("button8");
-var button9 = document.getElementById("button9");
-var xImage = "images/X.png"
-var oImage = "images/O.png" */
+var board ={
+
+button1 : document.getElementById("button1"),
+button2 : document.getElementById("button2"),
+button3 : document.getElementById("button3"),
+button4 : document.getElementById("button4"),
+button5 : document.getElementById("button5"),
+button6 : document.getElementById("button6"),
+button7 : document.getElementById("button7"),
+button8 : document.getElementById("button8"),
+button9 : document.getElementById("button9"),
+xImage : "images/X.png",
+oImage : "images/O.png",
+}
+
+
 
 
 
