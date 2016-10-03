@@ -1,5 +1,4 @@
 var board ={
-
 button1 : document.getElementById("button1"),
 button2 : document.getElementById("button2"),
 button3 : document.getElementById("button3"),
@@ -13,31 +12,27 @@ xImage : "<img src = 'images/X.png'></img>",
 oImage : "<img src = 'images/O.png'></img>",
 }
 
-
-
-
-
 var counter = 0;
-var activePlayer = null;
+var activePlayer = "X";
+
 var resetButton = document.getElementById("newGameButton");
+var buttons = document.getElementsByClassName("boardButton");
 
 var gameState = function {
-
-buttons = document.getElementsByClassName("boardButton")
 
 var playerXMove = function() {
   if (counter == 0) {
 
     for (var i = 0; i < buttons.length; i++){
 
-      if (buttons[i].innerHTML=null){
-      buttons[i].addEventListener(click, function() {
+      if (buttons[i].innerHTML == ""){
+      buttons[i].addEventListener('click', function() {
       buttons[i].innerHTML="<img src='images/X.png'/>";
       buttons[i].addAttribute(true);
         }
       }
     }
-  activePlayer = "X"
+  activePlayer = "O";
   if (checkWin(); == false){
     counter++;
     playerOMove();
@@ -53,15 +48,15 @@ var playerOMove = function(){
 
     for (var i = 0; i < buttons.length; i++){
 
-      if (buttons[i].innerHTML=null){
-      buttons[i].addEventListener(click, function() {
+      if (buttons[i].innerHTML == "") {
+      buttons[i].addEventListener('click', function() {
       buttons[i].innerHTML="<img src='images/O.png'/>";
       buttons[i].addAttribute(true);
         }
       }
     }
-    activePlayer = "O"
-    if (checkWin() == false {
+    activePlayer = "X";
+    if (checkWin() == false) {
       counter--;
       playerXMove();
   }
@@ -74,31 +69,33 @@ var playerOMove = function(){
 
 var checkWin = function() {
 
-        if(button1 == true && button2 == true && button3 == true){
+        if(board.button1 == true && board.button2 == true && board.button3 == true){
             return true;
         }
-        if(button4 == true && button5 == true && button6 == true){
+        if(board.button4 == true && board.button5 == true && board.button6 == true){
             return true;
         }
-        if(button7 == true && button8 == true && button9 == true){
+        if(board.button7 == true && board.button8 == true && board.button9 == true){
             return true;
         }
-        if(button1 == true && button4 == true && button7 == true){
+        if(board.button1 == true && board.button4 == true && board.button7 == true){
             return true;
         }
-        if(button2 == true && button5 == true && button8 == true){
+        if(board.button2 == true && board.button5 == true && board.button8 == true){
             return true;
         }
-        if(button3 == true && button6 == true && button9 == true){
+        if(board.button3 == true && board.button6 == true && board.button9 == true){
             return true;
         }
-        if(button1 == true && button5 == true && button9 == true){
+        if(board.button1 == true && board.button5 == true && board.button9 == true){
             return true;
         }
-        if(button3 == true && button5 == true && button7 == true){
+        if(board.button3 == true && board.button5 == true && board.button7 == true){
             return true;
         }
-        return false;
+        else {
+          return false;
+        }
     }
 
 }
