@@ -1,4 +1,35 @@
-var board ={
+
+var imgX = document.createElement('img');
+imgX.src = 'images/X.png';
+var imgO = document.createElement('img');
+imgO.src = 'images/O.png'
+
+console.log(imgEl)
+document.getElementById("button1").appendChild(imgEl);
+
+//
+// document.getElementById("button1").addEventListener("click", function(){
+//   document.getElementById("button1").src(<"images/X.png">)
+// })
+
+/* var X.src = 'images/X.png';
+
+
+document.getElementById("button1").addEventListener("click", function(){
+  document.getElementById("button1").appendChild(X);
+})
+
+*/
+
+
+
+
+
+
+
+
+
+/* var board ={
 button1 : document.getElementById("button1"),
 button2 : document.getElementById("button2"),
 button3 : document.getElementById("button3"),
@@ -16,24 +47,29 @@ var counter = 0;
 var activePlayer = "X";
 
 var resetButton = document.getElementById("newGameButton");
-var buttons = document.getElementsByClassName("boardButton");
+var buttons = []
 
-var gameState = function {
+for (i=0; i < 9; i++){
+board.buttons[i] = document.getElementsByClassName("boardButton");
+}
 
-var playerXMove = function() {
+
+
+
+(function() {
   if (counter == 0) {
 
     for (var i = 0; i < buttons.length; i++){
 
-      if (buttons[i].innerHTML == ""){
-      buttons[i].addEventListener('click', function() {
-      buttons[i].innerHTML="<img src='images/X.png'/>";
-      buttons[i].addAttribute(true);
-        }
+      if (board.button[i].innerHTML == ""){
+      board.button[i].addEventListener('click', function() {
+      board.button[i].style.backgroundImage = (xImage);
+      board.button[i].addAttribute(true);
+        })
       }
     }
   activePlayer = "O";
-  if (checkWin(); == false){
+  if (checkWin() == false){
     counter++;
     playerOMove();
   }
@@ -43,22 +79,23 @@ var playerXMove = function() {
 
 }
 
-var playerOMove = function(){
+function playerOMove(){
   if (counter == 1) {
 
     for (var i = 0; i < buttons.length; i++){
 
       if (buttons[i].innerHTML == "") {
-      buttons[i].addEventListener('click', function() {
-      buttons[i].innerHTML="<img src='images/O.png'/>";
-      buttons[i].addAttribute(true);
-        }
+      board.buttons[i].addEventListener('click', function() {
+      console.log('click');
+      board.buttons[i].appendChild(document.createElement(oImage));
+      board.buttons[i].addAttribute(true);
+        })
       }
     }
     activePlayer = "X";
     if (checkWin() == false) {
       counter--;
-      playerXMove();
+
   }
     else {
       gameOver();
@@ -67,36 +104,6 @@ var playerOMove = function(){
 }
 
 
-var checkWin = function() {
-
-        if(board.button1 == true && board.button2 == true && board.button3 == true){
-            return true;
-        }
-        if(board.button4 == true && board.button5 == true && board.button6 == true){
-            return true;
-        }
-        if(board.button7 == true && board.button8 == true && board.button9 == true){
-            return true;
-        }
-        if(board.button1 == true && board.button4 == true && board.button7 == true){
-            return true;
-        }
-        if(board.button2 == true && board.button5 == true && board.button8 == true){
-            return true;
-        }
-        if(board.button3 == true && board.button6 == true && board.button9 == true){
-            return true;
-        }
-        if(board.button1 == true && board.button5 == true && board.button9 == true){
-            return true;
-        }
-        if(board.button3 == true && board.button5 == true && board.button7 == true){
-            return true;
-        }
-        else {
-          return false;
-        }
-    }
 
 }
 
@@ -108,9 +115,12 @@ var gameOver = function() {
 
 var resetBoard = function() {
 
-        restartButton.addEventListener("click", function {
+        restartButton.addEventListener("click", function() {
           for (var i = 0; i < buttons.length; i++)
           buttons[i].innerHTML = null;
-        }
+        })
 
 }
+}
+)()
+*/
