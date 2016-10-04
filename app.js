@@ -4,22 +4,14 @@ imgX.src = 'images/X.png';
 var imgO = document.createElement('img');
 imgO.src = 'images/O.png'
 
-console.log(imgEl)
-document.getElementById("button1").appendChild(imgEl);
-
-//
-// document.getElementById("button1").addEventListener("click", function(){
-//   document.getElementById("button1").src(<"images/X.png">)
-// })
-
-/* var X.src = 'images/X.png';
+var counter = 0;
+var board = document.getElementsByClassName('board';
 
 
-document.getElementById("button1").addEventListener("click", function(){
-  document.getElementById("button1").appendChild(X);
-})
 
-*/
+
+//document.getElementById("button1").appendChild(imgEl);
+
 
 
 
