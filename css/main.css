@@ -38,10 +38,12 @@
 }
 #row1 #row2 #row3 {
     display: table;
+
 }
 img {
     height: 100%;
     width: 100%;
+    object-fit: inherit;
 }
 p {
     font-size: 35px;
