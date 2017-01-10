@@ -15,7 +15,33 @@
   </head>
 
   <body>
-  
+    <div class="container" ng-controller="MainCtrl">
+      <br>
+      <div class="jumbotron">
+        <h1>{{firebase.title}}</h1>
+        <button id="resetBtn" class="btn btn-default" ng-click="reset()">Reset Game</button>
+      </div>
+      <br>
+      <form role="form" id ="JoinGameForm">
+        <div class="form-group">
+          <label>{{message}}</label>
+          <br>
+          <input type="text" class="form-control" ng-model="nick">
+          <button id="joinGameBtn" class="btn btn-default" ng-click="addPlayer()">Join Game</button>
+        </div>
+      </form>
+      <div id="info" style="display:none">
+        <div class="row">
+        <div class="col-md-6"><h1>Nick: {{nick}} - P{{player}}</h1></div>
+        <div class="col-md-6"></div>
+        </div>
+        <div class="board">
+        <button id="Btn0" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[0]}}" ng-click="play(0)"></button><button id="Btn1" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[1]}}" ng-click="play(1)"></button><button id="Btn2" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[2]}}" ng-click="play(2)"></button><br>
+        <button id="Btn3" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[3]}}" ng-click="play(3)"></button><button id="Btn4" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[4]}}" ng-click="play(4)"></button><button id="Btn5" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[5]}}" ng-click="play(5)"></button><br>
+        <button id="Btn6" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[6]}}" ng-click="play(6)"></button><button id="Btn7" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[7]}}" ng-click="play(7)"></button><button id="Btn8" class="TicTacToeBtn TicTacToeBtn-{{firebase.board[8]}}" ng-click="play(8)"></button>
+        </div>
+      </div>
+    </div>  
 
     <script src="js/main.js"></script>
   </body>
