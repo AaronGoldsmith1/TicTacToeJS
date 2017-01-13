@@ -3,7 +3,7 @@
 ###Basic Two-Player Tic Tac Toe with Firebase providing real-time connection between remote users.
 
 ####Technologies Used 
-* AngularJS 1.2.6
+* AngularJS
 * jQuery
 * Firebase
 * AngularFire
