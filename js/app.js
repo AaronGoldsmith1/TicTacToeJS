@@ -9,7 +9,7 @@
      $scope.gameover = false;
 
      //Lets start by making a simple connection to the firebase
-     var firebase = new Firebase("https://tictactoe123456789.firebaseio.com/");
+     var firebase = new Firebase("https://angularfire-ttt.firebaseio.com/");
      //We can use Once to trigger a function like an onLoad. After the First data finishes loading, we trigger our function
      firebase.once('value', function(dataSnapshot) {
      $scope.message = $scope.checkPlayers();
@@ -22,8 +22,14 @@
     	});
 
       $scope.checkPlayers = function(){
+        if(!$scope.firebase.players || !$scope.firebase.players.length){
+          return;
+        }
+
+
         $("#JoinGameForm").show();
         $("#info").hide();
+
         if ($scope.firebase.players[0].nick == ""){
             $scope.player = 1;
             $("#joinGameBtn").attr("disabled", false);
@@ -50,7 +56,7 @@
                     $("#info").show();
                 }
                 else if ($scope.player == 2){
-                    var player2 = new Firebase("https://tictactoe123456789.firebaseio.com/players/1");
+                    var player2 = new Firebase("https://angularfire-ttt.firebaseio.com/players/1");
                     $scope.firebase.$child("players").$child("1").$update({"nick":$scope.nick});
                     $("#JoinGameForm").hide();
                     $("#info").show();
